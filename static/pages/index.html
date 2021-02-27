@@ -6,28 +6,141 @@
         <title>Welcome</title>
         <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     </head>
-    <body style="background-color: rgb(221, 220, 220);"> 
+    <body style="background-color:var(--backcolor);"> 
         
 
         <script type="module"  src="../js/web-components.js"></script>
         <cookie-popup></cookie-popup>
          <div class="topnav">
             <img class="logo" src="D:\Facultate\github\HackAUBG\static\img\logo.png" >  
-            <a href="#about">About</a>
-            <a href="#contact">Account</a>
+            <a href= "D:\Facultate\github\HackAUBG\static\pages\new_landmark.html">Add Landmark</a> 
+            <a href="">About</a>
+            <a href="D:\Facultate\github\HackAUBG\static\pages\sign.html">Account</a>
              <a href="#search">Search</a>
-            <a class="active" href="#home">Home</a>
+            <a class="active" href="D:\Facultate\github\HackAUBG\static\pages\index.html">Home</a>
+         
+        </div>
+        <div style = "height: 100%; width: 100%; position: absolute;">
+        <div class ="page-body"  >
+            <div style="display:inline-block;   position: absolute; left: 50%; transform: translate(-50%)">
+                <input class ="search-button" placeholder="Search city.."  >
+                <img class="search-img" src = "D:\Facultate\github\HackAUBG\static\img\loop-icon.png">
+            </div>
+            
+            <a href=" D:\Facultate\github\HackAUBG\static\pages\preferences.html"><button class = "find-me-button" >Find me!</button></a>
+         </div>
         </div>
 
-        <div class ="page-body"  >
-            <input class ="search-button" placeholder="Search city.."  >
-            <img class="search-img" src = "D:\Facultate\github\HackAUBG\static\img\loop-icon.png">
-            <button  class="find-me-button" type="button">Find me!</button>
-         </div>
-        <div >
+
+
+
+        <div style = "height: 125%; width: 100%; position: absolute; background-color: var(--backcolor); top:100%">
+            <div class="main">
+                <h1>Our recommendations</h1>
+                <ul class="cards">
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img  src="D:\Facultate\github\HackAUBG\static\img\munich.png"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Munich</h2>
+                        <p class="card_text">Is the capital and most populous city of Bavaria.</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="D:\Facultate\github\HackAUBG\static\img\Sofia.png"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Sofia</h2>
+                        <p class="card_text"> The city was first mentioned in 1158. Catholic Munich strongly resisted the Reformation and was a political point of divergence during the resulting Thirty Years' War.Is the capital and most populous city of Bavaria</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="D:\Facultate\github\HackAUBG\static\img\Cluj-Napoca.png"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Cluj-Napoca</h2>
+                        <p class="card_text">Where the Powerpuff girls are studying and a very nice city in Romania. On the site of the city was a pre-Roman settlement named Napoca. So now you know why its named like this</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="D:\Facultate\github\HackAUBG\static\img\London.png"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">London</h2>
+                        <p class="card_text"> London is the capital and largest city of England and the United Kingdom.  The city stands on the River Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea. London has been a major settlement for two millennia.Londinium was founded by the Romans.  The City of London, London's ancient core and financial centre</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="D:\Facultate\github\HackAUBG\static\img\Budapest.png"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Budapest</h2>
+                        <p class="card_text">Budapest  , Hungarian pronunciation:  is the capital and the most populous city of Hungary, and the ninth-largest city in the European Union by population within city limits.  The city has an estimated population of 1,752,286 over a land area of about 525 square kilometres (203 square miles). Budapest is both a city and county .</p>
+                        <button class="btn card_btn">Read More</button>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="D:\Facultate\github\HackAUBG\static\img\paris.png"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Paris</h2>
+                        <p class="card_text"> Paris is the capital and most populous city of France because of Eifel tour , Louvre mouseum and many other landmarks.  </p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <h3 class="made_by">Made with ♡</h3>
+        </div >
           
+         
+
+
+
+
+        <footer class="site-footer" style ="position: absolute; top : 225%; padding-left:50px;  " >
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">We are Powerpuff Girls and we are here to save the city!
+            <ul> 
+                Powerpuff Girls’ members:
+                <li>Arion Dan Vasile </li>
+                <li>Astalus Claudiu Adrian</li>
+                <li>Barabaș Elina</li>
+                <li>Benedek Robert George</li></ull>
+                
+          </div>
+ 
+         
         </div>
-        
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+         <a href="#">Powerpuff Girls</a>.
+            </p>
+          </div>
+
+           
+        </div>
+      </div>
+    </footer>
+          
     </body>
 
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
