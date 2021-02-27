@@ -21,6 +21,12 @@ ul {
     width:  50% ;
   }
   
+  #top{
+      float: left;
+      width: 100%;
+      border-bottom: 2px solid var(--accent-color);
+  }
+
   li a {
     display: block;
     color: var(--main-color);
