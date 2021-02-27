@@ -21,13 +21,15 @@
                 <label for="short_description">Short description:</label>
                   <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
             </br>
-                <label for="landmark_tags">Tags:</label>
-                  <input id="landmark_tags" name="landmark_tags" placeholder="Tags" type="text"></br>
-            </br>
-                <label for="landmark_location">Location:</label>
-                  <button id="landmark_location" onclick="geoFindMe()">Get my Location</button>
-                  <p id = "status"></p>
-                  <a id = "map-link" target="_blank"></a>
+                <label for="landmark_type">Landmark Type:</label>
+                  <select id="landmark_type" name="Types">
+                      <option selected>...</option>
+                      <option value="science">Science</option>
+                      <option value="art">Art</option>
+                      <option value="history">History</option>
+                      <option value="park">Park</option>
+                  </select>
+
             </br></br>
                 <label for="is_crowded">Is it usually crowded?</label>
                   <ul>
