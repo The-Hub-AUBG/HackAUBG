@@ -1,3 +1,4 @@
+
 let selectedFile;
 function handleFileUploadChange(e) {
   selectedFile = e.target.files[0];
@@ -10,19 +11,39 @@ function uuidv4() {
   );
 }
 
+
 function ShowAlert(txt){
     alert(txt);
 }
+
 document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
 function ShowAlert(message){
     alert(message);
 }
 
+
 function add_landmark(){
+    document.getElementById("overlay").style.display="block";
     // get data from inputs
-    
+
+    var landmark_name=document.getElementById("landmark_name").value;
+    var short_description=document.getElementById("short_description").value;
+    var landmark_type=document.getElementById("landmark_type").value;   
+    var is_crowded=document.getElementById("is_crowded").value;
+
     if(false){
-        //validate data
+        if(landmark_name==""){
+            document.getElementById("overlay").style.display="none";
+            ShowAlert("Landmark name filed cannot be null");
+        }
+        else if(short_description==""){
+            document.getElementById("overlay").style.display="none";
+            ShowAlert("Description field cannot be null");
+        }
+        else if(landmark_type="..."){
+            document.getElementById("overlay").style.display="none";
+            ShowAlert("Landmark type field cannot be null");
+        }
     }
     else{
         try{
@@ -39,7 +60,7 @@ function add_landmark(){
             db.collection('landmarks').doc(uuidv4().toString()).set({
                 short_description:short_description,
                 landmark_name:landmark_name,
-                stories:[],
+                landmark_type:landmark_type,
                 latitude:latitude,
                 longitude:longitude,
                 is_crowded:is_crowded,
