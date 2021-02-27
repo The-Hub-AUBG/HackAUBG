@@ -31,11 +31,14 @@
                   </select>
 
             </br></br>
-                <label for="is_crowded">Is it usually crowded?</label>
-                  <ul>
-                      <li><a id="crowded_no">No</a></li>
-                      <li><a id="crowded_yes">Yes</a></li>
-                  </ul>
+                  <label class="switch" for="is_crowded">
+                    <input type="checkbox" id="is_crowded">
+                    <div class="slider round">
+                     <span class="yes" id="crowded">crowded</span>
+                     <span class="no" id="not_crowded">not crowded</span>
+                    </div>
+                   </label>
+                   
             </br>
                 <label for="landmark_photo">Photo:</label>
                 <div id="filesubmit">
@@ -47,6 +50,8 @@
             </div>
         </div>
     </div>
+
+
 
 </body>
 <script src="../js/new_landmark.js"></script>

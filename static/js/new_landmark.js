@@ -15,7 +15,7 @@ function add_landmark(){
     var landmark_name=document.getElementById("landmark_name").value;
     var short_description=document.getElementById("short_description").value;
     var landmark_type=document.getElementById("landmark_type").value;   
-    console.log(landmark_type)
+    var is_crowded=document.getElementById("is_crowded").value;
 
     if(false){
         if(landmark_name==""){
