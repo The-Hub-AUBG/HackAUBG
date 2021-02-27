@@ -3,13 +3,31 @@
     <head>
       <link rel="stylesheet" type="text/css" href="../css/values.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <title></title>
+        <title>Welcome</title>
         <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     </head>
-    <body>
+    <body style="background-color: rgb(221, 220, 220);"> 
+        
+
         <script type="module"  src="../js/web-components.js"></script>
         <cookie-popup></cookie-popup>
-        <nav-bar></nav-bar>
+         <div class="topnav">
+            <img class="logo" src="D:\Facultate\github\HackAUBG\static\img\logo.png" >  
+            <a href="#about">About</a>
+            <a href="#contact">Account</a>
+             <a href="#search">Search</a>
+            <a class="active" href="#home">Home</a>
+        </div>
+
+        <div class ="page-body"  >
+            <input class ="search-button" placeholder="Search city.."  >
+            <img class="search-img" src = "D:\Facultate\github\HackAUBG\static\img\loop-icon.png">
+            <button  class="find-me-button" type="button">Find me!</button>
+         </div>
+        <div >
+          
+        </div>
+        
     </body>
 
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
