@@ -8,8 +8,31 @@
 </head>
 
 <body>
-
-    <h1>Map</h1>
+    <div class="landmarkdiv">
+        <ul>
+            <li><a id="landmark_header" class="active" onclick="">Add a landmark on the map</a></li>
+        </ul>
+        <div class="overlay" id="overlay" style="display: none;"><div class="loader"></div></div>
+        <div class="content">
+            <div id="landmark_tab">
+                <label for="landmark_name">Landmark name:</label>
+                  <input id="landmark_name" name="landmark_name" placeholder="Landmark name" type="text"></br>
+                
+                <label for="short_description">Short description:</label>
+                  <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
+                
+                <label for="landmark_tags">Tags:</label>
+                  <input id="landmark_tags" name="landmark_tags" placeholder="Tags" type="text"></br>
+                
+                <label for="short_description">Short description</label>
+                  <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
+                
+                <label for="short_description">Short description</label>
+                  <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
+                
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="../js/new_landmark.js"></script>
