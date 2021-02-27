@@ -4,7 +4,9 @@
     --main-color:#F0F7F4;
     --accent-color:#412234;
     --second-color:#EAD7D7 ;
-    --third-color:#FFFFFF;
+    --third-color:rgb(206, 200, 200);
+    --backcolor: rgb(221, 220, 220);
+
     --text-font:Vollkorn;
 }
 
