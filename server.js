@@ -15,8 +15,19 @@ app.use('/img', express.static(path.join(__dirname, 'static','img')));
 
 // Routing for pages
 app.get('/', function(request, response) {
-  
   response.sendFile(path.join(__dirname, 'static','pages','index.html'));
+});
+app.get('/map', function(request, response) {
+  response.sendFile(path.join(__dirname, 'static','pages','map.html'));
+});
+app.get('/preferences', function(request, response) {
+  response.sendFile(path.join(__dirname, 'static','pages','preferences.html'));
+});
+app.get('/sign', function(request, response) {
+  response.sendFile(path.join(__dirname, 'static','pages','sign.html'));
+});
+app.get('/user', function(request, response) {
+  response.sendFile(path.join(__dirname, 'static','pages','user.html'));
 });
 app.get('*', function(request, response){
   response.sendFile(path.join(__dirname, 'static','pages','404.html'));
