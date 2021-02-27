@@ -68,6 +68,11 @@ ul {
     color:var(--accent-color);
   
   }
+
+  li a:visited{
+    background-color: var(--accent-color);
+    color: var(--second-color);
+  }
   .landmarkdiv{
       position: absolute;
       background-color: var(--accent-color);
@@ -163,3 +168,8 @@ ul {
   label{
     color: var(--accent-color);
   }
+
+  a::after{
+    background-color: cadetblue;
+  }
+
