@@ -21,30 +21,37 @@
                 <label for="short_description">Short description:</label>
                   <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
             </br>
-                <label for="landmark_tags">Tags:</label>
-                  <input id="landmark_tags" name="landmark_tags" placeholder="Tags" type="text"></br>
-            </br>
-                <label for="landmark_location">Location:</label>
-                  <button id="landmark_location" onclick="geoFindMe()">Get my Location</button>
-                  <p id = "status"></p>
-                  <a id = "map-link" target="_blank"></a>
+                <label for="landmark_type">Landmark Type: </label>
+                  <select id="landmark_type" name="Types">
+                      <option selected>...</option>
+                      <option value="science">Science</option>
+                      <option value="art">Art</option>
+                      <option value="history">History</option>
+                      <option value="park">Park</option>
+                  </select>
+
             </br></br>
-                <label for="is_crowded">Is it usually crowded?</label>
-                  <ul>
-                      <li><a id="crowded_no">No</a></li>
-                      <li><a id="crowded_yes">Yes</a></li>
-                  </ul>
+                  <label class="switch" for="is_crowded">
+                    <input type="checkbox" id="is_crowded">
+                    <div class="slider round">
+                     <span class="yes" id="crowded">crowded</span>
+                     <span class="no" id="not_crowded">not crowded</span>
+                    </div>
+                   </label>
+                   
             </br>
-                <label for="short_description">Photo:</label>
+                <label for="landmark_photo">Photo:</label>
                 <div id="filesubmit">
-                    <img style="max-height: 60px;transform: translateY(50%);border-radius: 50%;" id="register_tab_photo"  name="register_tab_photo" >
-                    <input for="register_tab_photo" type="file" class="file-select" style="width:80%" accept="image/*" />
+                    <img style="max-height: 60px;transform: translateY(50%);border-radius: 50%;" id="landmark_photo"  name="landmark_photo" >
+                    <input for="landmark_photo" type="file" class="file-select" style="width:80%" accept="image/*" />
                 </div>
             </br>
-            <button onclick="" id="add_landmark">Add Landmark</button>
+            <button onclick="add_landmark()" id="add_landmark">Add Landmark</button>
             </div>
         </div>
     </div>
+
+
 
 </body>
 <script src="../js/new_landmark.js"></script>
