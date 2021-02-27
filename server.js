@@ -29,6 +29,9 @@ app.get('/sign', function(request, response) {
 app.get('/user', function(request, response) {
   response.sendFile(path.join(__dirname, 'static','pages','user.html'));
 });
+app.get('/new_landmark', function(request, response) {
+  response.sendFile(path.join(__dirname, 'static','pages','new_landmark.html'));
+});
 app.get('*', function(request, response){
   response.sendFile(path.join(__dirname, 'static','pages','404.html'));
 });

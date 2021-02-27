@@ -111,7 +111,7 @@ function register(){
             localStorage.setItem("UserPhoto",photo_id);
             localStorage.setItem("UserName",register_tab_username);
             /// try to upload photo
-            const uploadTask = storageRef.child("Users").child(photo_id).put(selectedFile); //create a child directory called images, and place the file inside this directory
+            const uploadTask = storageRef.child("users").child(photo_id).put(selectedFile); //create a child directory called images, and place the file inside this directory
             uploadTask.on('state_changed', (snapshot) => {
             }, (error) => {
               // Handle unsuccessful uploads
