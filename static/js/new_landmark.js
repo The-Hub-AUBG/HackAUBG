@@ -1,12 +1,35 @@
+
+function uuidv4() {
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+  }
+
+function ShowAlert(txt){
+    alert(txt);
+}
+
 function add_landmark(){
     document.getElementById("overlay").style.display="block";
     // get data from inputs
     var landmark_name=document.getElementById("landmark_name").value;
     var short_description=document.getElementById("short_description").value;
-    var landmark_tags=document.getElementById("landmark_tags").value;
+    var landmark_type=document.getElementById("landmark_type").value;   
+    console.log(landmark_type)
 
     if(false){
-        //validate data
+        if(landmark_name==""){
+            document.getElementById("overlay").style.display="none";
+            ShowAlert("Landmark name filed cannot be null");
+        }
+        else if(short_description==""){
+            document.getElementById("overlay").style.display="none";
+            ShowAlert("Description field cannot be null");
+        }
+        else if(landmark_type="..."){
+            document.getElementById("overlay").style.display="none";
+            ShowAlert("Landmark type field cannot be null");
+        }
     }
     else{
         try{
@@ -23,7 +46,7 @@ function add_landmark(){
             db.collection('landmarks').doc(uuidv4().toString()).set({
                 short_description:short_description,
                 landmark_name:landmark_name,
-                stories:[],
+                landmark_type:landmark_type,
                 latitude:latitude,
                 longitude:longitude,
                 is_crowded:is_crowded,
@@ -44,33 +67,3 @@ function add_landmark(){
     }
 } 
 }
-
-function geoFindMe() {
-
-    const status = document.querySelector('#landmark_location');
-    const mapLink = document.querySelector('#map-link');
-  
-    //mapLink.href = '';
-    mapLink.textContent = '';
-  
-    function success(position) {
-      const latitude  = position.coords.latitude;
-      const longitude = position.coords.longitude;
-  
-      status.textContent = '';
-    //   mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-      mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-    }
-  
-    function error() {
-      status.textContent = 'Unable to retrieve your location';
-    }
-  
-    if(!navigator.geolocation) {
-      status.textContent = 'Geolocation is not supported by your browser';
-    } else {
-      status.textContent = 'Locating…';
-      navigator.geolocation.getCurrentPosition(success, error);
-    }
-  
-  }

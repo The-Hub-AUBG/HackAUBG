@@ -21,7 +21,7 @@
                 <label for="short_description">Short description:</label>
                   <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
             </br>
-                <label for="landmark_type">Landmark Type:</label>
+                <label for="landmark_type">Landmark Type: </label>
                   <select id="landmark_type" name="Types">
                       <option selected>...</option>
                       <option value="science">Science</option>
@@ -37,13 +37,13 @@
                       <li><a id="crowded_yes">Yes</a></li>
                   </ul>
             </br>
-                <label for="short_description">Photo:</label>
+                <label for="landmark_photo">Photo:</label>
                 <div id="filesubmit">
-                    <img style="max-height: 60px;transform: translateY(50%);border-radius: 50%;" id="register_tab_photo"  name="register_tab_photo" >
-                    <input for="register_tab_photo" type="file" class="file-select" style="width:80%" accept="image/*" />
+                    <img style="max-height: 60px;transform: translateY(50%);border-radius: 50%;" id="landmark_photo"  name="landmark_photo" >
+                    <input for="landmark_photo" type="file" class="file-select" style="width:80%" accept="image/*" />
                 </div>
             </br>
-            <button onclick="" id="add_landmark">Add Landmark</button>
+            <button onclick="add_landmark()" id="add_landmark">Add Landmark</button>
             </div>
         </div>
     </div>
