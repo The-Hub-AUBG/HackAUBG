@@ -8,9 +8,49 @@
 </head>
 
 <body>
-
-    <h1>Sign</h1>
-
+    <div class="signdiv">
+        <ul>
+            <li><a id="login_header" class="active" onclick="show_login_tab()">Login</a></li>
+            <li><a id="register_header" onclick="show_register_tab()">Register</a></li>
+          </ul>
+          <div class="overlay" id="overlay" style="display: none;"><div class="loader"></div></div>
+          <div class="content">
+              <div id="login_tab">
+               <label for="login_tab_email">Email</label>
+                <input id="login_tab_email" name="login_tab_email" placeholder="Email" type="email"></br>
+                <label for="login_tab_password">Password</label>
+                <input id="login_tab_password" name="login_tab_password" placeholder="Password" type="password"></br>
+                <button onclick="login()" id="log_but">Login</button>
+              </div>
+          <!------------------------------------------------------->
+          <div id="register_tab" style="display: none;">
+           <label for="register_tab_email">Email</label>
+            <input id="register_tab_email" name="register_tab_email" placeholder="Email" type="email" ></br>
+            <label for="register_tab_password">Password</label>
+            <input id="register_tab_password" name="register_tab_password" placeholder="Password" type="password"></br>
+            <label for="register_tab_repeat_password">Repeat Password</label>
+            <input id="register_tab_repeat_password" name="register_tab_repeat_password" placeholder="Repeat Password" type="password"></br>
+            <label for="register_tab_username">Username</label>
+            <input id="register_tab_username" name="register_tab_username" placeholder="Userame" type="text"></br>
+            <label>Profile Pic</label>
+            <div id="filesubmit">
+            <img style="max-height: 60px;transform: translateY(50%);border-radius: 50%;" id="register_tab_photo"  name="register_tab_photo" src="../img/picture_placeholder.png">
+            <input for="register_tab_photo" type="file" class="file-select" style="width:80%" accept="image/*" />
+            </div>
+           <div style="white-space:nowrap;align-content: flex-start;padding:15px">
+               <input type="checkbox" id="terms_and_conditions_check" name="terms_and_conditions_check" class="checkbox"/>
+               <label for="terms_and_conditions_check">I Agree to <a href="https://www.termsandconditionsgenerator.com/live.php?token=WXwSS0IFhpWNxOBITHafi1j4Q3rd8sZK">terms and conditions</a></label>
+           </div>
+            <button onclick="register()" id="reg_but">Register</button>
+          </div>
+          </div>
+       </div>
 </body>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-storage.js"></script>
+<script src="../js/firebaseConfig.js"></script>
 <script src="../js/sign.js"></script>
 </html>
