@@ -24,11 +24,12 @@
                 <label for="landmark_tags">Tags:</label>
                   <input id="landmark_tags" name="landmark_tags" placeholder="Tags" type="text"></br>
             </br>
-                <label for="short_description">Location:</label>
-                  <input id="short_description" name="short_description" placeholder="Short description" type="text"></br>
-            </br>
+                <label for="landmark_location">Location:</label>
+                  <button id="landmark_location" onclick="geoFindMe()">Get my Location</button>
+                  <p id = "status"></p>
+                  <a id = "map-link" target="_blank"></a>
+            </br></br>
                 <label for="is_crowded">Is it usually crowded?</label>
-                  
                   <ul>
                       <li><a id="crowded_no">No</a></li>
                       <li><a id="crowded_yes">Yes</a></li>

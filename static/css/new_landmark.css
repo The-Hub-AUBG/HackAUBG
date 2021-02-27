@@ -133,7 +133,7 @@ ul {
       -webkit-box-shadow: none;
       box-shadow: none;
     }
-  button{
+  button#add_landmark{
       width: 100%;
       height:100%;
       margin:0px;
@@ -172,4 +172,3 @@ ul {
   a::after{
     background-color: cadetblue;
   }
-
