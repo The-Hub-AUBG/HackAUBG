@@ -17,7 +17,11 @@
     font-family: 'Vollkorn';
     src: url('./Vollkorn-Regular.ttf');
   }
-
+  @font-face {
+    font-family: 'Hind';
+    src: url('./HindSiliguri-Medium.ttf');
+  }
+  
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -39,6 +43,7 @@
     overflow-x: hidden;
     background-color: var(--main-color);
     font-family:var(--text-font);
+    box-sizing: border-box;
     -webkit-user-select: none; /* Safari */        
 -moz-user-select: none; /* Firefox */
 -ms-user-select: none; /* IE10+/Edge */

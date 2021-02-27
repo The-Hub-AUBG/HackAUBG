@@ -5,12 +5,39 @@
         <link rel="stylesheet" type="text/css" href="../css/map.css">
         <title></title>
         <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 
 <body>
-
-    <h1>Map</h1>
-
+    <div id="schedule" class="schedule">
+    </div>
+    <div class="open_close_schedule_button" id="open_close_schedule_button"><img id="open_close_schedule_image" src="../img/close.png" style="width:24px;height:24px;margin:8px" /></div>
+    <div id="map"></div>
+    <div id="chat_div" class="chat_div">
+        <section class="msger">
+            <header class="msger-header">
+              <div class="msger-header-title">
+                <i class="fas fa-comment-alt"></i> SimpleChat
+              </div>
+              <div class="msger-header-options">
+                <span><i class="fas fa-cog"></i></span>
+              </div>
+            </header>
+            <main class="msger-chat">
+                
+            </main> 
+            <form class="msger-inputarea">
+                <button type="submit" class="msger-send-btn">Send</button>
+              <input type="text" class="msger-input" placeholder="Enter your message...">
+            </form>
+          </section>
+    </div>
+    <div id="chat-button" class="chat-button"><img src="../img/chat.png" style="width:36px;height:36px;margin:10px"/>  </div>
 </body>
-<script src="../js/map.js"></script>
+<!-- 
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-2YAGsNdMkIrilqnN0zDqsupTHlLM7kc&callback=initMap&libraries=&v=weekly" async></script>
+-->
+      <script src="../js/map.js"></script>
+
 </html>

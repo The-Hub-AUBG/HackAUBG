@@ -1,5 +1,26 @@
+let selectedFile;
+function handleFileUploadChange(e) {
+  selectedFile = e.target.files[0];
+  document.getElementById("register_tab_photo").src=URL.createObjectURL(selectedFile);
+}
+
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+function ShowAlert(txt){
+    alert(txt);
+}
+document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+function ShowAlert(message){
+    alert(message);
+}
+
 function add_landmark(){
     // get data from inputs
+    
     if(false){
         //validate data
     }
@@ -23,6 +44,7 @@ function add_landmark(){
                 longitude:longitude,
                 is_crowded:is_crowded,
                 photo_id:photo_id,
+                
             }).then(() => {
                 //clear inputs
             })
