@@ -6,38 +6,105 @@
         <title>Welcome</title>
         <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     </head>
-    <body style="background-color:var(--backcolor);"> 
+    <body> 
         
 
         <script type="module"  src="../js/web-components.js"></script>
         <cookie-popup></cookie-popup>
          <div class="topnav">
-            <img class="logo" src="D:\Facultate\github\HackAUBG\static\img\logo.png" >  
-            <a href= "D:\Facultate\github\HackAUBG\static\pages\new_landmark.html">Add Landmark</a> 
-            <a href="">About</a>
-            <a href="D:\Facultate\github\HackAUBG\static\pages\sign.html">Account</a>
-             <a href="#search">Search</a>
-            <a class="active" href="D:\Facultate\github\HackAUBG\static\pages\index.html">Home</a>
-         
+            <img class="logo" src="../img/logo.png" > 
+            <a href="/sign">Sign In</a>
+            <a href="/pricing">Pricing</a> 
+            <a href="/new_landmark">Contribute</a>
+            <a href="/new_landmark">Contact</a>
+            <a class="active" href="/">Home</a>
         </div>
         <div style = "height: 100%; width: 100%; position: absolute;">
-        <div class ="page-body"  >
-            <div style="display:inline-block;   position: absolute; left: 50%; transform: translate(-50%)">
-                <input class ="search-button" placeholder="Search city.."  >
-                <img class="search-img" src = "D:\Facultate\github\HackAUBG\static\img\loop-icon.png">
-            </div>
-            
-            <a href=" D:\Facultate\github\HackAUBG\static\pages\preferences.html"><button class = "find-me-button" >Find me!</button></a>
-         </div>
+          <section id="banner" class="banner">
+            <canvas id="nokey">
+                Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+            </canvas>  
+        <div class="headtextblock" >
+            <p class="title_text">Waddles</p> 
+            <p class="subtitle_text">Your&nbsp;pocket&nbsp;tourist&nbsp;guide</p> 
+             <p class="title_button_p"><input placeholder="Place to visit" class="impsrc" id="impsrc"> <button class="srcbtn" style="background-color: var(--second_tint_color)" onclick="redirect_to_preferences()"> <img src="../img/logo.png" style="height:100%"></button> </p>
+        </div>     
+    </section>
         </div>
 
 
 
 
-        <div style = "height: 125%; width: 100%; position: absolute; background-color: var(--backcolor); top:100%">
-            <div class="main">
+        <section style = "height: 100%; width: 100%; position: absolute; background-color: var(--background_color); top:100%;padding:5%;" >
+
                 <h1>Our recommendations</h1>
-                <ul class="cards">
+          <div class="recommandation">
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+            <div>
+              <div class="visual">
+                <img src="../img/London.png" style="top:0px;left:0px;width:100%"/>
+              </div>
+              <h2>Munich</h2>
+              <p style="padding-left:10px;padding-right:10px;">Is the capital and most populous city of Bavaria.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+                <ul class="cards" style="display:none">
                   <li class="cards_item">
                     <div class="card">
                       <div class="card_image"><img  src="D:\Facultate\github\HackAUBG\static\img\munich.png"></div>
@@ -99,17 +166,16 @@
                     </div>
                   </li>
                 </ul>
-              </div>
               
-              <h3 class="made_by">Made with ♡</h3>
-        </div >
+
+        </section >
           
          
 
 
 
 
-        <footer class="site-footer" style ="position: absolute; top : 225%; padding-left:50px;  " >
+        <footer class="site-footer" style ="position: absolute; left:0px;top : 225%;" >
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
@@ -121,7 +187,6 @@
                 <li>Astalus Claudiu Adrian</li>
                 <li>Barabaș Elina</li>
                 <li>Benedek Robert George</li></ull>
-                
           </div>
  
          

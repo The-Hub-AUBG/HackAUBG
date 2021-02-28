@@ -1,24 +1,20 @@
 /*This will be used as "environment variables" for the project. Any variables that might change due to style change should be here*/
 
 :root {
-    --main-color:#F0F7F4;
-    --accent-color:#412234;
-    --second-color:#EAD7D7 ;
-    --third-color:rgb(206, 200, 200);
-    --backcolor: rgb(221, 220, 220);
-
-    --text-font:Vollkorn;
+    --background_color:#ffffff;
+    --dark_text_color:#000000;
+    --light_text_color:#ffffff;
+    --accent_color:#000000;
+    --first_tint_color:#C1C1C1;
+    --second_tint_color:#E1E1E1;
+    --third_tint_color:#222222;
+    --text_font:Hind;
 }
 
 *{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-@font-face {
-    font-family: 'Vollkorn';
-    src: url('./Vollkorn-Regular.ttf');
-  }
   @font-face {
     font-family: 'Hind';
     src: url('./HindSiliguri-Medium.ttf');
@@ -28,26 +24,73 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--main-color); 
+    background: var(--background_color); 
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--accent-color); 
+    background: var(--accent_color); 
   }
   ::-webkit-scrollbar-thumb:hover {
     width:20px; 
   }
-
   html, body{
     height: 100%;
     width:100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: var(--main-color);
-    font-family:var(--text-font);
+    background-color: var(--background_color);
+    font-family:var(--text_font);
     box-sizing: border-box;
     -webkit-user-select: none; /* Safari */        
--moz-user-select: none; /* Firefox */
--ms-user-select: none; /* IE10+/Edge */
-user-select: none; /* Standard */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+
+
+
+.topnav {
+  background-color: var(--backcolor);
+  overflow: hidden;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  z-index:100;
+  padding-right: 30px;
+  padding-top: 25px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color:  var(--dark_text_color);
+  text-align: center;
+  padding: 10px 16px;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  border-radius: 15px;
+  background-color: var(--first_tint_color);
+  color: var(--light_text_color);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  border-radius: 15px;
+  background-color: var( --accent_color);
+  color: var(--light_text_color);
+}
+
+.logo {
+  margin-left: 60px;
+  margin-top:-10px;
+  width: 50px ;
+  height: 50px ;
+  align-self: left;
 }

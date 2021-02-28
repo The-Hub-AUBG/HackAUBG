@@ -1,18 +1,3 @@
-var actual_position={
-  lat:localStorage.getItem("latitude")||45,
-  lng:localStorage.getItem ("longitude")||26
-};
-/*
-let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: actual_position ,
-    zoom: 16,
-    disableDefaultUI: true,
-  });
-}
-*/
 var is_schedule_open=true;
 function open_close_schedule(){
     if(is_schedule_open){
@@ -114,3 +99,62 @@ function open_close_chat(){
 }
 
 document.getElementById("chat-button").addEventListener('click',open_close_chat);
+
+
+var destination;
+var allow_crowded;
+var budget;
+var currency;
+var to_walk;
+var food;
+var visit_preferences;
+
+function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return;
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+
+(()=>{
+    let parameters= parseURLParams(location.href);
+    console.log(parameters);
+    destination=parameters.city_name.toString();
+    allow_crowded=parameters.allow_crowded || true;
+    budget=parameters.budget || 100;
+    currency=parameters.currency || "dollar";
+    to_walk=parameters.to_walk || "medium";
+    food=parameters.food || "any";
+    visit_preferences=parameters.visit_preferences || "any";
+    console.log(destination + " " +allow_crowded + " " + budget+  " " +currency+ " " +to_walk+ " " + food +" " +visit_preferences+ " ");
+})();
+
+let map;
+function initMap() {
+  var geocoder = new google.maps.Geocoder();
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: 0, lng: 0} ,
+    zoom: 16,
+    disableDefaultUI: true,
+  });
+  geocoder.geocode({'address':destination }, function(results, status) {
+    if (status === 'OK') {
+      map.setCenter(results[0].geometry.location);
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
