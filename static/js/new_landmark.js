@@ -31,19 +31,18 @@ function add_landmark(){
     var landmark_type=document.getElementById("landmark_type").value;   
     var is_crowded=document.getElementById("is_crowded").value;
 
-    if(false){
-        if(landmark_name==""){
-            document.getElementById("overlay").style.display="none";
-            ShowAlert("Landmark name filed cannot be null");
-        }
-        else if(short_description==""){
-            document.getElementById("overlay").style.display="none";
-            ShowAlert("Description field cannot be null");
-        }
-        else if(landmark_type="..."){
-            document.getElementById("overlay").style.display="none";
-            ShowAlert("Landmark type field cannot be null");
-        }
+    //if(false){
+    if(landmark_name==""){
+        document.getElementById("overlay").style.display="none";
+        ShowAlert("Landmark name filed cannot be null");
+    }
+    else if(short_description==""){
+        document.getElementById("overlay").style.display="none";
+        ShowAlert("Description field cannot be null");
+    }
+    else if(landmark_type="..."){
+        document.getElementById("overlay").style.display="none";
+        ShowAlert("Landmark type field cannot be null"); 
     }
     else{
         try{
