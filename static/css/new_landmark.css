@@ -186,11 +186,14 @@ a::after{
 .switch {
   position: relative;
   display: inline-block;
+  border: 1px solid var(--third_tint_color);
+  border-radius: 25px;
   width: 150px;
   height: 34px;
 } 
 
 .switch input {display:none;}  
+
 
 .slider {
   position: absolute;
@@ -199,7 +202,7 @@ a::after{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:var(--accent-color);
+  background-color: var(--third_tint_color);
   -webkit-transition: .4s;
   transition: .4s;
 }  
@@ -227,10 +230,11 @@ input:checked + .slider:before {
   -ms-transform: translateX(115px);
   transform: translateX(115px);
 }
+
 .yes
 {
   display: none;
-  color: var(--accent-color);
+  color: var(--third_tint_color);
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
@@ -240,7 +244,7 @@ input:checked + .slider:before {
 }
 
 .no{
-  color: var(--accent-color);
+  color: var(--second_tint_color);
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
