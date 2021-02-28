@@ -1,4 +1,4 @@
-# Powerpuff girls
+# Team Powerpuff Girls
 # Waddles
 ## Your pocket tourist guide
 
